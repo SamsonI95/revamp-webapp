@@ -1,0 +1,44 @@
+.mobile-menu-nav {
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.mobile-menu-nav:active,
+.mobile-menu-nav:focus {
+  background-color: #ffffff;
+  color: black;
+}
+
+.desktop-menu-nav {
+  transition: color 0.3s ease-in-out;
+}
+.desktop-menu-nav:hover {
+  color: #69f2c2;
+  border-radius: 50px;
+  background-color: #ffffff;
+  padding: 5px 8px;
+  transition: ease-in-out 0.3s;
+}
+
+.desktop-menu-nav:active,
+.desktop-menu-nav:focus {
+  border-radius: 50px;
+  background-color: #ffffff;
+  padding: 5px 8px;
+}
+
+.mobile-about-style {
+  background-color: rgba(128, 128, 128, 0.3);
+  width: 100%;
+  height: 50%;
+  clip-path: polygon(100% 0%, 0% 20%, 0% 100%, 100% 100%);
+}
+
+.desktop-about-style {
+  background-color: #d7d7d7;
+  width: 60%;
+  height: 85vh;
+  clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
