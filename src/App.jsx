@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 
 // Image(s)
-import Avatar from "/NewAvatar.png";
+import Avatar from "/src/NewAvatar.png";
 
 function App() {
   return (
@@ -62,7 +62,7 @@ function App() {
             <img className="relative left-[25px]" src={Avatar} alt="Avatar" width={500} />
           </div>
         </section>
-        
+
       </div>
     </>
   );

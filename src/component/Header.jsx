@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 // Image(s)
-import Logo from "/Logo.svg";
+import Logo from "/src/Logo.svg";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
