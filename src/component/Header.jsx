@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 
 // Icon(s)
@@ -9,11 +9,32 @@ import Logo from "/src/Logo.svg";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const menuRef = useRef(null);
 
   //Toggle menu
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      // If clicking outside the menu and the toggle button
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !event.target.closest(".menu-toggle")
+      ) {
+        setShowMenu(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   //smooth scrolling
   const handleSmoothScroll = (event, targetId) => {
@@ -26,21 +47,25 @@ const Header = () => {
         behavior: "smooth", // This enables smooth scrolling
       });
     }
+    setShowMenu(false);
   };
 
   return (
     <>
       <nav className="flex items-center justify-between shadow-xl">
         <div className="py-3 pl-7">
-          <img src={Logo} alt="logo" />
+          <Link href="/home">
+            <img src={Logo} alt="logo" />
+          </Link>
         </div>
-        <div className="py-3 pr-7 md:hidden">
+        <div className="py-3 pr-7 md:hidden menu-toggle">
           {showMenu ? (
             <FaTimes className="text-white w-8 h-7" onClick={toggleMenu} />
           ) : (
             <FaBars className="text-white w-8 h-7" onClick={toggleMenu} />
           )}
           <div
+            ref={menuRef}
             className={`text-white font-semibold text-[12px] flex flex-col items-center absolute top-20 right-0 w-full bg-black bg-opacity-80 
     transform transition-all duration-500 ease-in-out ${
       showMenu

@@ -1,3 +1,7 @@
+* {
+  color: white;
+}
+
 .mobile-menu-nav {
   padding: 20px 0;
   width: 100%;
@@ -41,4 +45,24 @@
   width: 60%;
   height: 85vh;
   clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.line {
+  width: 50px;
+  height: 5px;
+  background-color: white;
+}
+
+.slashes {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 10px;
+  font-family: monospace; /* Ensures consistent slashes appearance */
+  transform: scaleX(1.2); /* Optional, to stretch the slashes */
 }
