@@ -57,10 +57,16 @@ function App() {
               <h3 className="text-4xl font-bold">Samson Iweibo</h3>
               <p className="text-2xl">Front-end developer</p>
             </div>
-            <div className="text-white relative top-[5rem] space-y-7">
-              <MdOutlineAlternateEmail className="text-[3rem]" />
-              <FaGithub className="text-[3rem]" />
-              <FaLinkedin className="text-[3rem]" />
+            <div className="text-white relative top-[5rem]">
+              <a href="mailto:iebunorun@gmail.com">
+                <MdOutlineAlternateEmail className="text-[3rem] mb-7" />
+              </a>
+              <a href="https://github.com/SamsonI95">
+                <FaGithub className="text-[3rem] mb-7" />
+              </a>
+              <a href="www.linkedin.com/in/samsoniweibo">
+                <FaLinkedin className="text-[3rem]" />
+              </a>
             </div>
           </div>
         </section>
@@ -78,15 +84,15 @@ function App() {
                 </p>
               </div>
               <div className="flex mt-5 space-x-7">
-                <Link to="">
+                <a href="mailto:iebunorun@gmail.com">
                   <MdOutlineAlternateEmail className="text-[3rem]" />
-                </Link>
-                <Link to="">
+                </a>
+                <a href="https://github.com/SamsonI95">
                   <FaGithub className="text-[3rem]" />
-                </Link>
-                <Link to="">
+                </a>
+                <a href="www.linkedin.com/in/samsoniweibo">
                   <FaLinkedin className="text-[3rem]" />
-                </Link>
+                </a>
               </div>
             </div>
           </div>
@@ -224,7 +230,6 @@ function App() {
               PORTFOLIO
             </h3>
           </div>
-          
         </section>
         <section>
           <button
