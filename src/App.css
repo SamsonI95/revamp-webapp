@@ -1,5 +1,6 @@
 * {
   color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mobile-menu-nav {
@@ -65,4 +66,31 @@
   margin: 0 10px;
   font-family: monospace; /* Ensures consistent slashes appearance */
   transform: scaleX(1.2); /* Optional, to stretch the slashes */
+}
+
+.input-style {
+  color: black;
+  background: transparent;
+  font-size: 12px;
+  width: 243px;
+  padding: 10px;
+  border: none; /* Remove all borders initially */
+  border-left: 5px solid black; /* Left border */
+  border-bottom: 5px solid black; /* Bottom border */
+  outline: none; /* Remove default outline */
+  transition: all 0.3s ease; /* Optional: Smooth effect on focus or hover */
+}
+
+.input-style::placeholder {
+  color: black; /* Placeholder text color */
+}
+
+.input-style:focus {
+  border-left: 2px solid blue; /* Change color on focus */
+  border-bottom: 2px solid blue;
+}
+
+.input-style:hover {
+  border-left: 2px solid gray; /* Change color on hover */
+  border-bottom: 2px solid gray;
 }

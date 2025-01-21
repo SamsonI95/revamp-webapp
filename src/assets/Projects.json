@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Christville-miniapp",
+        "description": "A telegram miniapp aimed at providing information about Christville's services and events.",
+        "image": "/christville.svg",
+        "link": "https://t.me/christvilleminiapp"
+    },
+    {
+        "id": 2,
+        "title": "Coinomad",
+        "description": "A platform created to help organizations make salary payment of different cryptocurrencies easier",
+        "image": "/coinomad2.png",
+        "link": "https://www.coinomad.com/"
+    },
+    {
+        "id": 3,
+        "title": "Clear air",
+        "description": "A web application that provides information about the air quality in different cities in Nigeria",
+        "image": "/clear-air2.png",
+        "link": "https://clearair.com.ng/"
+    },
+    {
+        "id": 4,
+        "title": "Serene Support",
+        "description": "A platform aimed at providing support to people who are in need of therapy and counseling",
+        "image": "/serenespport3.png",
+        "link": "https://serene-support.com.ng/"
+    },
+    {
+        "id": 5,
+        "title": "Alpha Twelve",
+        "description": "A single webpage to allow documentation and coordination of events",
+        "image": "/alphatwelve.png",
+        "link": "https://alphatwelve-assessment-app.vercel.app/"
+    },
+    {
+        "id": 6,
+        "title": "Hemdonor",
+        "description": "A platform created to easily identify and connect blood donors and recipients with blood banks in Nigeria",
+        "image": "/hemdonor.svg",
+        "link": "https://hemdonor.com.ng/"
+    }
+]

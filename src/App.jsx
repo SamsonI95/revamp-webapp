@@ -4,6 +4,8 @@ import "./App.css";
 
 // Component(s)
 import Header from "./component/Header";
+import Project from "../src/assets/Projects.json";
+import Footer from "./component/Footer";
 
 // Icon(s)
 import { MdOutlineAlternateEmail } from "react-icons/md";
@@ -64,7 +66,7 @@ function App() {
               <a href="https://github.com/SamsonI95">
                 <FaGithub className="text-[3rem] mb-7" />
               </a>
-              <a href="www.linkedin.com/in/samsoniweibo">
+              <a href="https://www.linkedin.com/in/samsoniweibo/">
                 <FaLinkedin className="text-[3rem]" />
               </a>
             </div>
@@ -90,7 +92,7 @@ function App() {
                 <a href="https://github.com/SamsonI95">
                   <FaGithub className="text-[3rem]" />
                 </a>
-                <a href="www.linkedin.com/in/samsoniweibo">
+                <a href="https://www.linkedin.com/in/samsoniweibo/">
                   <FaLinkedin className="text-[3rem]" />
                 </a>
               </div>
@@ -223,12 +225,70 @@ function App() {
         </section>
         <section
           id="portfolio"
-          className="mt-[10rem] lg:mt-[142px] mx-auto space-y-[4rem]"
+          className="mt-[10rem] lg:mt-[142px] space-y-[4rem] mx-auto"
         >
-          <div className="background border-8 p-8 w-[268px] text-center">
+          <div className="background border-8 p-8 w-[268px] text-center translate-x-4">
             <h3 className="text-white font-bold text-xl lg:text-3xl">
               PORTFOLIO
             </h3>
+          </div>
+          <div className="">
+            {Project.map((project) => (
+              <a href={project.link} key={project.id}>
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-[300px] h-[250px] mx-auto mt-[2rem]"
+                />
+                <div className="w-[300px] border-b-2">
+                  <h3 className="font-bold">{project.title}</h3>
+                  <p>{project.description}</p>
+                </div>
+              </a>
+            ))}
+          </div>
+          <div className="text-center py-4">
+            <h3>And more to come...</h3>
+          </div>
+        </section>
+        <section id="contact" className="bg-[#C0C0C0]">
+          <div className="mt-[10rem] lg:mt-[142px] space-y-[4rem] flex flex-col items-center mb-7">
+            <div className="border-black border-8 p-8 w-[268px] text-center">
+              <h3 className="text-black font-bold text-xl lg:text-3xl">
+                GET IN TOUCH
+              </h3>
+            </div>
+            <div className="flex flex-col items-center space-y-7">
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="ENTER YOUR NAME"
+                className="input-style h-[60px]"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="ENTER YOUR EMAIL"
+                className="input-style h-[60px]"
+              />
+              <input
+                name="number"
+                id="phoneNumber"
+                placeholder="ENTER YOUR PHONE NUMBER"
+                className="input-style h-[60px]"
+              />
+              <textarea
+                name="message"
+                id="message"
+                placeholder="ENTER YOUR MESSAGE"
+                className="input-style h-[200px]"
+              ></textarea>
+              <button className="text-black border-black border-x-4 w-[141px] font-semibold">
+                SUBMIT
+              </button>
+            </div>
           </div>
         </section>
         <section>
@@ -239,6 +299,7 @@ function App() {
             <IoIosArrowDropupCircle />
           </button>
         </section>
+        <Footer />
       </div>
     </>
   );
