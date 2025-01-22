@@ -258,7 +258,7 @@ function App() {
         </section>
         <section id="contact" className="bg-[#C0C0C0] lg:px-[5rem]">
           <div className="mt-[10rem] lg:mt-[142px] space-y-[4rem] flex flex-col items-center mb-7">
-            <div className="border-black border-8 p-8 w-[268px] text-center">
+            <div className="border-black border-8 p-8 w-[268px] lg:w-[367px] text-center">
               <h3 className="text-black font-bold text-xl lg:text-3xl">
                 GET IN TOUCH
               </h3>
