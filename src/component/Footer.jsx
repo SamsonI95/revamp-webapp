@@ -26,7 +26,7 @@ const Footer = () => {
             <FaLinkedin className="text-[3rem]" />
           </a>
         </section>
-        <section className="space-y-2">
+        <section className="space-y-2 lg:flex flex-col items-center">
           <h3>
             Desgined by: <a className="font-bold text-2xl" href="https://github.com/nerooc">Tomasz Gajda</a>
           </h3>

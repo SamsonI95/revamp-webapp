@@ -100,7 +100,7 @@ function App() {
           </div>
           <div className="flex items-center justify-centerborder rounded-full w-[550px] h-[550px] bg-white">
             <img
-              className="relative left-[25px]"
+              className="relative left-[8px]"
               src={Avatar}
               alt="Avatar"
               width={500}
