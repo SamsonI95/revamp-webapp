@@ -74,20 +74,20 @@ function App() {
         </section>
         <section
           id="home"
-          className="hidden md:flex items-center justify-between"
+          className="hidden md:flex items-center justify-between px-[5rem]"
         >
           <div className="desktop-about-style">
             <div className="relative top-[8rem] left-[28px]">
-              <div className="text-black">
+              <div>
                 <p className="text-[40px] font-bold">Hi, I am</p>
-                <h3 className="text-[60px] font-bold">Samson Iweibo</h3>
+                <h3 className="text-[60px] font-bold ">Samson Iweibo</h3>
                 <p className="text-[40px] text-[#909090]">
                   Front-end developer
                 </p>
               </div>
-              <div className="flex mt-5 space-x-7">
+              <div className="flex mt-5 space-x-7 ">
                 <a href="mailto:iebunorun@gmail.com">
-                  <MdOutlineAlternateEmail className="text-[3rem]" />
+                  <MdOutlineAlternateEmail className="text-[3rem] " />
                 </a>
                 <a href="https://github.com/SamsonI95">
                   <FaGithub className="text-[3rem]" />
@@ -109,7 +109,7 @@ function App() {
         </section>
         <section
           id="about"
-          className="w-fit h-fit mt-[10rem] lg:mt-[142px] flex flex-col items-center px-7 lg:px-0 space-y-[4rem]"
+          className="w-fit h-fit mt-[10rem] lg:mt-[142px] flex flex-col items-center px-7 lg:px-[5rem] space-y-[4rem]"
         >
           <div className="border-8 p-8 w-[268px] text-center">
             <h3 className="text-white font-bold text-xl lg:text-3xl">
@@ -167,80 +167,85 @@ function App() {
         </section>
         <section
           id="skills"
-          className="mt-[10rem] lg:mt-[142px] mx-auto space-y-[4rem]"
+          className="bg-[#C0C0C0] mt-[10rem] lg:mt-[142px] lg:py-[5rem] lg:px-[5rem] flex flex-col items-center space-y-[4rem]"
         >
           <div className="border-8 p-8 w-[268px] text-center">
             <h3 className="text-white font-bold text-xl lg:text-3xl">SKILLS</h3>
           </div>
-          <ul className="space-y-7 flex flex-col items-center">
+          <ul className="space-y-7 flex flex-col lg:grid lg:grid-cols-3 lg:gap-x-10 lg:gap-y-10 items-center">
             <li className="text-center">
               <img
                 src={html}
                 alt="html"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px]"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
               />
-              <p className="mt-4 text-2xl">HTML5</p>
+              <p className="mt-4 text-2xl lg:text-4xl">HTML5</p>
             </li>
             <li className="text-center">
               <img
                 src={css}
                 alt="css"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px]"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
               />
-              <p className="mt-4 text-2xl">CSS</p>
+              <p className="mt-4 text-2xl lg:text-4xl">CSS</p>
             </li>
             <li className="text-center">
               <img
                 src={javascript}
                 alt="js"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px]"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
               />
-              <p className="mt-4 text-2xl">JS6</p>
+              <p className="mt-4 text-2xl lg:text-4xl">JS6</p>
             </li>
             <li className="text-center">
               <img
                 src={react}
                 alt="react"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px]"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
               />
-              <p className="mt-4 text-2xl">REACT</p>
+              <p className="mt-4 text-2xl lg:text-4xl">REACT</p>
             </li>
             <li className="text-center">
               <img
                 src={tailwind}
                 alt="twcss"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px] mx-auto"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px] mx-auto"
               />
-              <p className="mt-4 text-2xl">TAILWIND CSS</p>
+              <p className="mt-4 text-2xl lg:text-4xl">TAILWIND CSS</p>
             </li>
             <li className="text-center">
               <img
                 src={firebase}
                 alt="firebase"
-                className="w-[100px] h-[100px] lg:w-[48px] lg:h-[48px]"
+                className="w-[100px] h-[100px] lg:w-[250px] lg:h-[250px]"
               />
-              <p className="mt-4 text-2xl">FIREBASE</p>
+              <p className="mt-4 text-2xl lg:text-4xl">FIREBASE</p>
             </li>
           </ul>
         </section>
         <section
           id="portfolio"
-          className="mt-[10rem] lg:mt-[142px] space-y-[4rem] mx-auto"
+          className="mt-[10rem] lg:mt-[142px] lg:px-5rem space-y-[4rem] flex flex-col items-center"
         >
           <div className="background border-8 p-8 w-[268px] text-center translate-x-4">
             <h3 className="text-white font-bold text-xl lg:text-3xl">
               PORTFOLIO
             </h3>
           </div>
-          <div className="">
+          <div className="lg:grid lg:grid-cols-3">
             {Project.map((project) => (
               <a href={project.link} key={project.id}>
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-[300px] h-[250px] mx-auto mt-[2rem]"
+                  className="w-[300px] h-[250px] mx-auto mt-[2rem] md:hidden"
                 />
-                <div className="w-[300px] border-b-2">
+                <img
+                  src={project.image2}
+                  alt={project.title}
+                  className="hidden md:block w-[300px] h-[250px] mx-auto object-coverF"
+                />
+                <div className="w-[300px] border-b-2 md:hidden">
                   <h3 className="font-bold">{project.title}</h3>
                   <p>{project.description}</p>
                 </div>
@@ -251,7 +256,7 @@ function App() {
             <h3>And more to come...</h3>
           </div>
         </section>
-        <section id="contact" className="bg-[#C0C0C0]">
+        <section id="contact" className="bg-[#C0C0C0] lg:px-[5rem]">
           <div className="mt-[10rem] lg:mt-[142px] space-y-[4rem] flex flex-col items-center mb-7">
             <div className="border-black border-8 p-8 w-[268px] text-center">
               <h3 className="text-black font-bold text-xl lg:text-3xl">
