@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-cream: #f7f1e8;
+  --color-espresso: #30251f;
+  --color-terracotta: #c65d3a;
+  --color-butter: #f2d477;
+  --color-olive: #78805a;
+  --color-peach: #e9b9a7;
+  --color-warm-white: #fffcf7;
+
+  --font-serif: var(--font-fraunces);
+  --font-sans: var(--font-dm-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-cream text-espresso font-sans antialiased;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-4 outline-terracotta;
+  }
+
+  ::selection {
+    @apply bg-butter text-espresso;
+  }
+}
+
+@utility underline-sweep {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 0.3s ease;
+
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  pointer-events: none;
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
